@@ -11,10 +11,9 @@ public class GameRunner {
      * (GameRunner 클래스 생성자와 run 메소드 수정필요)
      */
 
-    // private MarioGame game;
-    private SuperContraGame game;
+    private GamingConsole game;
 
-    public GameRunner(SuperContraGame game) {
+    public GameRunner(GamingConsole game) {
         this.game = game;
     }
 
@@ -25,6 +24,5 @@ public class GameRunner {
         game.down();
         game.left();
         game.right();
-
     }
 }

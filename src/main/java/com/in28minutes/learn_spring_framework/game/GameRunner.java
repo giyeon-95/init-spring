@@ -3,7 +3,7 @@ package com.in28minutes.learn_spring_framework.game;
 public class GameRunner {
 
     /*
-     * 결합의 정도 *
+     * 결합의 정도
      * 
      * 느슨한 결합 -> GameRunner 클래스가 어떠한 game 클래스를 사용할 때, 별도의 인스턴스를 생성하지 않고 생성자를 통해
      * 전달받는다. (GameRunner 클래스 생성자만 수정필요)

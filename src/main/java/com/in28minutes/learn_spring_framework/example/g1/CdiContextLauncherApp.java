@@ -5,27 +5,17 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
-import jakarta.inject.Inject;
-import jakarta.inject.Named;
 
-/* 
- * CDI 어노테이션 (@Named / @Inject)을 사용한 의존성 주입 방법 
- * (주석 처리부분은 Setter를 통한 주입 방식 : Setter 방식에서 jakarta 어노테이션으로 변경됨.)
- * @Named : @Component 대체
- * @Inject : @Autowired 대체
- * (pom.xml에서 jakarta.inject:jakarta.inject-api:1.0.1 의존성 추가 필요)
- */
 
-// @Component
-@Named
+@Service
 class BussinessService {
 
     private DataService dataService;
 
     /* @Autowired : Setter 주입 방식 */
-    // @Autowired
-    @Inject
+    @Autowired
     public void setDataService(DataService dataService) {
         this.dataService = dataService;
     }
@@ -36,8 +26,7 @@ class BussinessService {
     }
 }
 
-// @Component
-@Named
+@Component
 class DataService {
 
 }
